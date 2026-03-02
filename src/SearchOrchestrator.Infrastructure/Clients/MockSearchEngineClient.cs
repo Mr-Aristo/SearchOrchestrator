@@ -37,7 +37,7 @@ public class MockSearchEngineClient : ISearchEngineClient
     /// the search results. The collection will be empty if no results are found.</returns>
     public async Task<IEnumerable<string>> SearchAsync(string query, CancellationToken cancellationToken)
     {
-        await Task.Delay(500, cancellationToken); // Network delyapy simulation
+        await Task.Delay(500, cancellationToken); // Network delay simulation
         return new List<string> { $"Result 1 for '{query}'", $"Result 2 for '{query}'" };
     }
 }
